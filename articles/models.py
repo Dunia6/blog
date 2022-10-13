@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Category(models.Model):
+    """ Modèle catégorie d'un article  """
     title = models.CharField(max_length=100)
     created_on = models.DateTimeField(auto_now_add = True)
 
@@ -16,6 +17,7 @@ CHOIX_STATUS = (
     ("publié", "Publié"),
 )
 class Article(models.Model):
+    """ Modèle de l'article du bloc """
     title = models.CharField(max_length=100, blank=True, unique=True)
     slug = models.SlugField(max_length=200,blank=True, unique=True)
     image = models.ImageField(upload_to="uploads/images/{0}",null=True, blank='True')
@@ -37,6 +39,7 @@ class Article(models.Model):
 
 
 class Comment(models.Model):
+    """ Modèle Commentaire """
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name="comments")
     name = models.CharField(max_length=100)
     email = models.EmailField()
