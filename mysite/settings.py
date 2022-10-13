@@ -125,27 +125,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Summernote
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-#Quill
-# QUILL_CONFIGS = {
-#     'default':{
-#         'theme': 'snow',
-#         'modules': {
-#             'syntax': True,
-#             'toolbar': [
-#                 [
-#                     {'font': []},
-#                     {'header': []},
-#                     {'align': []},
-#                     'bold', 'italic', 'underline', 'strike', 'blockquote',
-#                     {'color': []},
-#                     {'background': []},
-#                 ],
-#                 ['code-block', 'link'],
-#                 ['clean'],
-#             ]
-#         }
-#     }
-# }
 
 # REST FRAMEWORK
 
