@@ -12,7 +12,8 @@ class ArticleViews(ReadOnlyModelViewSet):
     serializer_class = ArticleSerializer
     
 
-
+class comments_view(ReadOnlyModelViewSet):
+    pass
 
 # class ArticleDetail():
 #     queryset = Article.objects.all()
