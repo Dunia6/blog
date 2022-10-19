@@ -20,7 +20,7 @@ class Article(models.Model):
     title = models.CharField(max_length=100, blank=True, unique=True)
     slug = models.SlugField(max_length=200,blank=True, unique=True)
     image = models.ImageField(upload_to="uploads/images/{0}",null=True, blank='True')
-    category = models.ManyToManyField(Category, blank=True)
+    category = models.ForeignKey(Category, blank=True,on_delete=models.CASCADE, related_name='articles')
     overview = models.TextField()
     content = models.TextField()
     status = models.CharField(choices=CHOIX_STATUS, max_length=200, default="brouillon")
