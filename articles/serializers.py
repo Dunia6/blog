@@ -7,7 +7,7 @@ class CommentSerializer(serializers.HyperlinkedRelatedField):
 
     class Meta:
         model = Comment
-        field = "__all__"
+        fields = ['url', 'name', 'email', 'body', 'active']
 
 
 class ArticleSerializer(serializers.HyperlinkedModelSerializer):
